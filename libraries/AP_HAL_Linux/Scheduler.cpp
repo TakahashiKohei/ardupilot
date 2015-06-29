@@ -395,6 +395,7 @@ void LinuxScheduler::panic(const prog_char_t *errormsg)
     write(1, errormsg, strlen(errormsg));
     write(1, "\n", 1);
     hal.scheduler->delay_microseconds(10000);
+    hal.rcin->deinit();
     exit(1);
 }
 
