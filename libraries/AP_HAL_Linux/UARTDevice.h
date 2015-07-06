@@ -6,7 +6,7 @@
 
 class UARTDevice: public SerialDevice {
 public:
-    UARTDevice(char *device_path);
+    UARTDevice(const char *device_path);
     virtual ~UARTDevice();
 
     virtual bool open() override;
@@ -20,7 +20,7 @@ private:
     void _disable_crlf();
 
     int _fd = -1;
-    char *_device_path;
+    const char *_device_path;
 };
 
 #endif

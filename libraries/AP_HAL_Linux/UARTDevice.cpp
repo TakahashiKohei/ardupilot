@@ -18,7 +18,7 @@
 #include <fcntl.h>
 #include <poll.h>
 
-UARTDevice::UARTDevice(char *device_path): 
+UARTDevice::UARTDevice(const char *device_path): 
     _device_path(device_path)
 {
 }
